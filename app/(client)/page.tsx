@@ -1,9 +1,12 @@
 import Banner from "@/components/banner";
 import ProductList from "@/components/productlist";
-import { getallCategories, getallProducts, getsaleBanner } from "@/sanity/helpers";
-import { Products } from "@/sanity.types";
+import {
+  getallCategories,
+  getallProducts,
+  getsaleBanner,
+} from "@/sanity/helpers";
 export default async function Home() {
-  try{
+  try {
     const [products, banners, categories] = await Promise.all([
       getallProducts(),
       getsaleBanner(),
@@ -13,13 +16,13 @@ export default async function Home() {
       return <div className="container mx-auto p-4">Error loading data</div>;
     }
     return (
-     <div> 
-     <Banner banners={banners}  />
-     <ProductList products={products} title={true} categories={categories} />
-     </div>
+      <div>
+        <Banner banners={banners} />
+        <ProductList products={products} title={true} categories={categories} />
+      </div>
     );
   } catch (error) {
-  console.error('Error loading home page data:', error);
-  return <div>Something went wrong</div>;
-}
+    console.error("Error loading home page data:", error);
+    return <div>Something went wrong</div>;
+  }
 }

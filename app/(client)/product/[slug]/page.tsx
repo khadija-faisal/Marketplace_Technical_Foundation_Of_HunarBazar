@@ -29,17 +29,17 @@ const ProductDetailPage = async ({ params }: { params: { slug: string } }) => {
           />
         </div>
         <div className=" flex md:w-1/2 flex-col gap-4">
-        {product?.status && (
-         <div className=" text-lg font-semibold text-mahrron">
-           {product.status.split("").map((char, index) => (
-             <span key={index}>{char}</span>
-           ))}
-         </div>
-       )}
+          {product?.status && (
+            <div className=" text-lg font-semibold text-mahrron">
+              {product.status.split("").map((char, index) => (
+                <span key={index}>{char}</span>
+              ))}
+            </div>
+          )}
           <h2 className="text-black font-semibold text-2xl lg:text-4xl">
             {product?.product}
           </h2>
-      
+
           <div>
             <PriceView price={product?.price} discount={product?.discount} />
           </div>
@@ -61,34 +61,34 @@ const ProductDetailPage = async ({ params }: { params: { slug: string } }) => {
               In Stock
             </span>
           ) : (
-            <span className="bg-slate-100 w-32 text-center text-base px-6 py-4 font-semibold rounded-lg underline text-hashblack">             
+            <span className="bg-slate-100 w-32 text-center text-base px-6 py-4 font-semibold rounded-lg underline text-hashblack">
               out of Stock
             </span>
           )}
           <div className="w-[90%]  bg-black h-[1px]"></div>
-          <p><span className=" font-semibold">30</span> people are viewing</p>
+          <p>
+            <span className=" font-semibold">30</span> people are viewing
+          </p>
           <p className="text-black lg:text-lg">{product?.description}</p>
-         {product && <AddtoBag product={product} />}
-         <div className="flex flex-wrap item-center justify-between gap-3 border-b border-b-hashblack py-5 -mt-3">
-             <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
-                 <RxBorderSplit className=" text-lg" /> 
-                 <span>Compare Color</span>
-             </div>
-             <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
-                 <FaRegQuestionCircle className=" text-lg" /> 
-                 <span>Ask a Question</span>
-             </div>
-             <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
-                 <TbTruckDelivery className=" text-lg" /> 
-                 <span>Delivery and Return</span>
-             </div>
-             <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
-                 <FiShare2 className=" text-lg" /> 
-                 <span>share</span>
-             </div>
-           </div>
-           
-
+          {product && <AddtoBag product={product} />}
+          <div className="flex flex-wrap item-center justify-between gap-3 border-b border-b-hashblack py-5 -mt-3">
+            <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
+              <RxBorderSplit className=" text-lg" />
+              <span>Compare Color</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
+              <FaRegQuestionCircle className=" text-lg" />
+              <span>Ask a Question</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
+              <TbTruckDelivery className=" text-lg" />
+              <span>Delivery and Return</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-black hover:text-mahrron hoverEffext">
+              <FiShare2 className=" text-lg" />
+              <span>share</span>
+            </div>
+          </div>
         </div>
       </div>
     </Container>

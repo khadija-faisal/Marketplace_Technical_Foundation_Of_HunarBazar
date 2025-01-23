@@ -5,7 +5,7 @@ import {
   SALE_QUERY,
   PRODUCT_BY_SLUG,
   PRODUCT_SEARCH_QUERY,
-  PRODUCT_BY_CATEGORY
+  PRODUCT_BY_CATEGORY,
 } from "./queries";
 
 export const getsaleBanner = async () => {
@@ -79,7 +79,7 @@ export const getProductbyCategories = async (CategorySlug: string) => {
     const productbyCategory = await sanityFetch({
       query: PRODUCT_BY_CATEGORY,
       params: {
-         CategorySlug ,
+        CategorySlug,
       },
     });
     console.log("Search results:", productbyCategory);

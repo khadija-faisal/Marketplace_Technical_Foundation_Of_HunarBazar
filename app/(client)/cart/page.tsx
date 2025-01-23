@@ -66,14 +66,14 @@ const CartPage = () => {
                 </h1>
               </div>
               <div className="grid lg:grid-cols-3 md:gap-8 pb-40 ">
-         <div className="lg:col-span-2 font-montserrat">
+                <div className="lg:col-span-2 font-montserrat">
                   <div className=" grid grid-cols-5 items-center justify-center md:grid-cols-6 border rounded-tr-lg rounded-tl-l bg-slate-50 p-2.5 text-sm sm:text-base font-semibold  text-hashblack ">
                     <h2 className="col-span-2 md:col-span-3">Product</h2>
                     <h2>Price</h2>
                     <h2>Quantity</h2>
                     <h2 className="pl-5">Total</h2>
-                      </div>
-                      <div className="bg-slate-50 mt-1 border-t-0 rounded-br-lg rounded-bl-lg ">
+                  </div>
+                  <div className="bg-slate-50 mt-1 border-t-0 rounded-br-lg rounded-bl-lg ">
                     {groupedItems.map(({ product }) => {
                       const itemCount = getItemCount(product._id);
                       return (
@@ -126,8 +126,8 @@ const CartPage = () => {
                     <Button onClick={handleRestCart} className="m-5 ">
                       Reset Cart
                     </Button>
-                     </div>
                   </div>
+                </div>
                 <div className="lg:col-span-1 font-montserrat">
                   <div className="hidden md:inline-block w-full rounded-lg border p-6  bg-slate-50">
                     <h2 className="text-xl mb-4 text-hashblack font-semibold">
@@ -163,40 +163,39 @@ const CartPage = () => {
                     </div>
                   </div>
                 </div>
-            <div className="font-montserrat md:hidden fixed w-full rounded-lg bottom-0 border p-6  bg-slate-50">
-                    <h2 className="text-xl mb-4 text-hashblack font-semibold">
-                      Order Summary
-                    </h2>
-                    <div className="space-y-4">
-                      <div className="flex items-center  justify-between space-x-3 ">
-                        <span className="font-medium">SubTotal</span>
-                        <PriceFormat amount={getSubTotalPrice()} />
-                      </div>
-                      <div className="flex items-center  justify-between space-x-3 ">
-                        <span className="font-medium">Discount</span>
-                        <PriceFormat
-                          amount={getSubTotalPrice() - getTotalPrice()}
-                        />
-                      </div>
-                      <Separator />
-                      <div className="flex items-center  justify-between space-x-3 ">
-                        <span className="font-medium">Total</span>
-                        <PriceFormat amount={getTotalPrice()} />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <Button onClick={handleCheckoutProccess}>
-                          Proceed to Checkout
-                        </Button>
-                        <Link
-                          href={"/"}
-                          className="font-medium text-center text-primary text-sm hover:underline hoverEffect "
-                        >
-                          Coutinue Shoppping
-                        </Link>
-                      </div>
+                <div className="font-montserrat md:hidden fixed w-full rounded-lg bottom-0 border p-6  bg-slate-50">
+                  <h2 className="text-xl mb-4 text-hashblack font-semibold">
+                    Order Summary
+                  </h2>
+                  <div className="space-y-4">
+                    <div className="flex items-center  justify-between space-x-3 ">
+                      <span className="font-medium">SubTotal</span>
+                      <PriceFormat amount={getSubTotalPrice()} />
+                    </div>
+                    <div className="flex items-center  justify-between space-x-3 ">
+                      <span className="font-medium">Discount</span>
+                      <PriceFormat
+                        amount={getSubTotalPrice() - getTotalPrice()}
+                      />
+                    </div>
+                    <Separator />
+                    <div className="flex items-center  justify-between space-x-3 ">
+                      <span className="font-medium">Total</span>
+                      <PriceFormat amount={getTotalPrice()} />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <Button onClick={handleCheckoutProccess}>
+                        Proceed to Checkout
+                      </Button>
+                      <Link
+                        href={"/"}
+                        className="font-medium text-center text-primary text-sm hover:underline hoverEffect "
+                      >
+                        Coutinue Shoppping
+                      </Link>
                     </div>
                   </div>
-                
+                </div>
               </div>
             </>
           ) : (

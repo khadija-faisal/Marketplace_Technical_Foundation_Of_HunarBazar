@@ -58,7 +58,7 @@ export const sale = defineType({
       options: {
         hotspot: true,
       },
-      validation: (Rule)=>Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "Image2",
@@ -67,7 +67,7 @@ export const sale = defineType({
       options: {
         hotspot: true,
       },
-      validation: (Rule)=>Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {

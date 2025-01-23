@@ -260,6 +260,7 @@ export declare const internalGroqTypeReferenceTo: unique symbol;
 // Variable: SALE_QUERY
 // Query: *[_type == 'sale' && active == true] | order(name asc){     title,    description,    salebadge,    discountamount,    coupon,    validStart,    validEnd,    "imageUrl": Image.asset->url,    "image2Url": Image2.asset->url,}
 export type SALE_QUERYResult = Array<{
+  _id: string
   title: string | null;
   description: string | null;
   salebadge: string | null;
