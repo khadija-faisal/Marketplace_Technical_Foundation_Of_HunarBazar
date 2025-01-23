@@ -28,7 +28,7 @@ if(productCount > 1){
     const isproductOutOfStock = product.stock == 0
    
   return (
-    <div className="flex items-center gap-3 text-base">
+    <div className="flex items-center gap-1 sm:gap-3 text-base">
       <Button variant={'outline'} size={'icon'} onClick={handleRemoveProduct} >
         <Minus />
       </Button>
