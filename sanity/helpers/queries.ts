@@ -1,17 +1,7 @@
 import { defineQuery } from "next-sanity";
 
 export const SALE_QUERY =
-  defineQuery(`*[_type == 'sale' && active == true] | order(name asc){
-     title,
-    description,
-    salebadge,
-    discountamount,
-    coupon,
-    validStart,
-    validEnd,
-    "imageUrl": Image.asset->url,
-    "image2Url": Image2.asset->url,
-}`);
+  defineQuery(`*[_type == 'sale' && active == true] | order(name asc)`);
 
 export const PRODUCTS_QUERY = defineQuery(
   `*[_type == 'products' ] | order(name asc)`

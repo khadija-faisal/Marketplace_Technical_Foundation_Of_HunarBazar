@@ -23,7 +23,7 @@ const Banner = ({ banners }: { banners: SALE_QUERYResult }) => {
                     <Image
                       className="hidden md:block"
                       src={
-                        banner?.imageUrl ? urlFor(banner.imageUrl).url() : ""
+                        banner?.Image ? urlFor(banner.Image).url() : ""
                       }
                       alt="banner"
                       width={1930}
@@ -32,7 +32,7 @@ const Banner = ({ banners }: { banners: SALE_QUERYResult }) => {
                     <Image
                       className="block md:hidden"
                       src={
-                        banner?.image2Url ? urlFor(banner.image2Url).url() : ""
+                        banner?.Image2 ? urlFor(banner.Image2).url() : ""
                       }
                       alt="banner"
                       width={1930}

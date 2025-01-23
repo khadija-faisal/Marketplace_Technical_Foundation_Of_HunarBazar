@@ -258,18 +258,43 @@ export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./sanity/helpers/queries.ts
 // Variable: SALE_QUERY
-// Query: *[_type == 'sale' && active == true] | order(name asc){     title,    description,    salebadge,    discountamount,    coupon,    validStart,    validEnd,    "imageUrl": Image.asset->url,    "image2Url": Image2.asset->url,}
+// Query: *[_type == 'sale' && active == true] | order(name asc)
 export type SALE_QUERYResult = Array<{
-  _id: string
-  title: string | null;
-  description: string | null;
-  salebadge: string | null;
-  discountamount: number | null;
-  coupon: string | null;
-  validStart: string | null;
-  validEnd: string | null;
-  imageUrl: string | null;
-  image2Url: string | null;
+  _id: string;
+  _type: "sale";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  description?: string;
+  salebadge?: string;
+  discountamount?: number;
+  coupon?: string;
+  validStart?: string;
+  validEnd?: string;
+  active?: boolean;
+  Image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  Image2?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
 }>;
 // Variable: PRODUCTS_QUERY
 // Query: *[_type == 'products' ] | order(name asc)
@@ -435,7 +460,7 @@ export type PRODUCT_BY_CATEGORYResult = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == 'sale' && active == true] | order(name asc){\n     title,\n    description,\n    salebadge,\n    discountamount,\n    coupon,\n    validStart,\n    validEnd,\n    \"imageUrl\": Image.asset->url,\n    \"image2Url\": Image2.asset->url,\n}": SALE_QUERYResult;
+    "*[_type == 'sale' && active == true] | order(name asc)": SALE_QUERYResult;
     "*[_type == 'products' ] | order(name asc)": PRODUCTS_QUERYResult;
     "*[_type == 'category'] | order(name asc)": CATEGORIES_QUERYResult;
     "*[_type == 'products' && slug.current == $slug] | order(name asc)[0]": PRODUCT_BY_SLUGResult;

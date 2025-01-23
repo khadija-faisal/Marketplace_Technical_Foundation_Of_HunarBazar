@@ -28,7 +28,6 @@ const CartPage = () => {
   } = useCartStore();
   const [isClient, setIsClient] = useState(false);
   const groupedItems = userCartStore((state) => state.getGroupedItems());
-  const { user } = useUser();
   const { isSignedIn } = useAuth();
   useEffect(() => {
     setIsClient(true);
