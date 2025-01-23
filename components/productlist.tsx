@@ -8,7 +8,7 @@ interface Productlist {
   title?: boolean;
   categories: Category[];
 }
-const ProductList = ({ products, title, categories }: Productlist) => {
+const ProductList = ({ products, categories }: Productlist) => {
   return (
     <div className="">
       <Categories categories={categories} />

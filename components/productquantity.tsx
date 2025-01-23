@@ -7,10 +7,10 @@ import toast from "react-hot-toast";
 import userCartStore from "@/store";
 interface QuantityButton {
   product: Products;
-  className?: string;
-  borderStyle?: string;
+   className?: string;
+ 
 }
-const ProductQuantityButton = ({ product, className }: QuantityButton) => {
+const ProductQuantityButton = ({ product }: QuantityButton) => {
   const { addItem, removeItem, getItemCount } = userCartStore();
   const handleRemoveProduct = () => {
     removeItem(product._id);
@@ -27,7 +27,7 @@ const ProductQuantityButton = ({ product, className }: QuantityButton) => {
     toast.success("add one more product to cart");
   };
   const productCount = getItemCount(product._id);
-  const isproductOutOfStock = product.stock == 0;
+ // const isproductOutOfStock = product.stock == 0;
 
   return (
     <div className="flex items-center gap-1 sm:gap-3 text-base">

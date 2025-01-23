@@ -50,6 +50,11 @@ const CategorySelect = ({ categories }: Props) => {
                     ?.toLowerCase()
                     .includes(e.currentTarget.value.toLowerCase())
                 );
+                if(selectcatogory?.slug?.current){
+                  setValue(selectcatogory?._id);
+                  router.push(`/categories/${selectcatogory?.slug.current}`);
+                  setopenCategory(false);
+                }
               }
             }}
           />
