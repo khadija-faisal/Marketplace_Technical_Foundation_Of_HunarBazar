@@ -12,8 +12,8 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
 
 type Props = {
-  params: { slug: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params:  { slug: string }
+  
 }
 
 const ProductDetailPage = async ({ params }: Props) => {

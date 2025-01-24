@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/header";
+import Loader from "@/components/loader";
 import { Toaster } from 'react-hot-toast';
 import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "@/components/footer";
@@ -26,6 +28,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
    <ClerkProvider dynamic>
      <html lang="en">
