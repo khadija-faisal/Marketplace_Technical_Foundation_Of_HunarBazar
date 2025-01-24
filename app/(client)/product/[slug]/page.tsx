@@ -11,18 +11,19 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-const ProductDetailPage = async ({ params }: PageProps) => {
-  if (!params || !params.slug) {
+const ProductDetailPage = async ({ params }: Props) => {
+
+  const { slug } = await params;
+  if (!slug) {
     return <Container>Product not found</Container>;
   }
 
-  const product = await getProductbySlug(params.slug);
+  const product = await getProductbySlug(slug);
 
   if (!product) {
     return <Container>Product not found</Container>;
