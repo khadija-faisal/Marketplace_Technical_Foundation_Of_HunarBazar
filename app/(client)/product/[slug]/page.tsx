@@ -12,13 +12,13 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
 
 type Props = {
-  params:  { slug: string }
+  params:  { slug: any }
   
 }
 
 const ProductDetailPage = async ({ params }: Props) => {
 
-  const { slug } = await params;
+  const { slug } = params;
   if (!slug) {
     return <Container>Product not found</Container>;
   }
