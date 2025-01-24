@@ -12,7 +12,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
 
 type Props = {
-  params:  { slug: any }
+  params:  { slug: string }
   
 }
 

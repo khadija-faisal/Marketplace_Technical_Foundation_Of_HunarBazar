@@ -44,7 +44,7 @@ export const getallCategories = async () => {
   }
 };
 
-export const getProductbySlug = async (slug: any) => {
+export const getProductbySlug = async (slug: string) => {
   try {
     const productbySlug = await sanityFetch({
       query: PRODUCT_BY_SLUG,
