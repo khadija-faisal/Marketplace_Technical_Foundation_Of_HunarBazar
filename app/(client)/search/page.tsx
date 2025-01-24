@@ -4,12 +4,12 @@ import { CircleX } from 'lucide-react';
 
 import ProductList from '@/components/productlist';
 import { getallCategories } from '@/sanity/helpers';
-interface Props {
-    searchParams:{
-        query:string
-    }
-}
-const SearchPage = async ({searchParams}: Props) => {
+
+const SearchPage = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ query: string }>
+}) => {
     const { query } = await searchParams;
     console.log("search query",query);
 const products = await getProductbyName(query);
