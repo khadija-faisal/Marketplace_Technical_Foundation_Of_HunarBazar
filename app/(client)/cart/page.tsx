@@ -2,7 +2,7 @@
 
 import Loader from "@/components/loader";
 import CartAccessDenied from "@/components/cartaccessdenied";
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import useCartStore from "@/store";
 import userCartStore from "@/store";

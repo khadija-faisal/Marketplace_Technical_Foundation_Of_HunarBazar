@@ -10,22 +10,34 @@ import { RxBorderSplit } from "react-icons/rx";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
-const ProductDetailPage = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = await params;
-  const product = await getProductbySlug(slug);
+
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+const ProductDetailPage = async ({ params }: PageProps) => {
+  if (!params || !params.slug) {
+    return <Container>Product not found</Container>;
+  }
+
+  const product = await getProductbySlug(params.slug);
+
+  if (!product) {
+    return <Container>Product not found</Container>;
+  }
 
   return (
     <Container>
-      <div className=" font-montserrat w-full flex flex-col md:flex-row gap-10 py-10 items-center">
+      <div className="font-montserrat w-full flex flex-col md:flex-row gap-10 py-10 items-center">
         <div className="md:w-1/2">
           <Image
-            src={
-              product?.productImage ? urlFor(product.productImage).url() : ""
-            }
-            className={`shadow-md p-10 md:p-0 overflow-hidden transition-transform group hover:scale-105 duration-500`}
-            alt="productimage"
+            src={product?.productImage ? urlFor(product.productImage).url() : ""}
+            alt={"Product Image"}
             width={700}
             height={700}
+            className="shadow-md p-10 md:p-0 overflow-hidden transition-transform group hover:scale-105 duration-500"
           />
         </div>
         <div className=" flex md:w-1/2 flex-col gap-4">
