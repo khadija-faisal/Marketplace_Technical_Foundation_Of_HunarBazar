@@ -11,14 +11,13 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
 
-type Props = {
-  params:  { slug: string }
-  
-}
+const ProductDetailPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) => {
 
-const ProductDetailPage = async ({ params }: Props) => {
-
-  const { slug } = params;
+  const { slug } = await params;
   if (!slug) {
     return <Container>Product not found</Container>;
   }
