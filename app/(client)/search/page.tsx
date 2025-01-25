@@ -19,7 +19,7 @@ if(!products?.length){
   return (
     <div className='py-40 w-full shadow-md gap-2 text-center flex flex-col justify-center items-center'>
     <div className=' px-10 flex gap-2 items-center '>
-    <CircleX  className='w-10 h-10 text-mahrron'/>
+    <CircleX className='w-10 h-10 text-mahrron'/>
       <h1 className=' font-montserrat  text-hashblack text-3xl sm:text-4xl font-semibold'>No Products Found For <span className='text-mahrron'>{query}</span> </h1>
     </div>
     <p className=' text-hashblack text-lg font-montserrat'>Try searching wih different keyword</p>
