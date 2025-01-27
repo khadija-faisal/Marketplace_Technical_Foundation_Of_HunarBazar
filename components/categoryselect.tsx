@@ -27,10 +27,10 @@ const CategorySelect = ({ categories }: Props) => {
     <Popover open={openCategory} onOpenChange={setopenCategory}>
       <PopoverTrigger asChild>
         <Button
-          variant={"outline"}
-          role="combobox"
+          variant="outline"
+          role="button"
           aria-expanded={openCategory}
-          className="w-[250px] text-base font-montserrat justify-between"
+          className="w-[250px] text-base text-black shadow-md font-montserrat justify-between"
         >
           {value
             ? categories.find((category) => category._id === value)?.title

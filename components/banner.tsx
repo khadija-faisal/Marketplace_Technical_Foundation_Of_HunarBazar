@@ -27,16 +27,16 @@ const Banner = ({ banners }: { banners: SALE_QUERYResult }) => {
                       }
                       alt="banner"
                       width={1930}
-                      height={400}
+                      height={300}
                     />
                     <Image
-                      className="block md:hidden"
+                      className="block  md:hidden"
                       src={
                         banner?.Image2 ? urlFor(banner.Image2).url() : ""
                       }
                       alt="banner"
-                      width={1930}
-                      height={400}
+                      width={750}
+                      height={858}
                     />
                   </div>
                 </CardContent>
