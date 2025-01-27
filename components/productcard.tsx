@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCard) => {
             className={`overflow-hidden h-[436px] object-cover transition-transform group-hover:scale-105 duration-500`}
             src={imageUrl}
             alt="productImage"
-            width={450}
+            width={390}
             height={325}
             loading="lazy"
           />

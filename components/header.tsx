@@ -15,7 +15,7 @@ const Header = async () => {
     <header className="py-2 bg-white border-b space-y-2 sm:space-y-0 font-montserrat sticky top-0 z-50 border-gray-400">
       <Container className="flex items-center gap-7 justify-between ">
         <Link href={"/"}>
-          <Image src={"/logo.png"} alt="Logo" width={250} height={100} />{" "}
+          <Image src={"/logo.png"} alt="Logo" width={200} height={90} />{" "}
         </Link>
 
         <Form

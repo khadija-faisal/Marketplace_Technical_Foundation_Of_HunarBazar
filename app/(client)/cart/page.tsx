@@ -161,7 +161,7 @@ const CartPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="font-montserrat md:hidden fixed w-full rounded-lg bottom-0 border p-6  bg-slate-50">
+                <div className="font-montserrat md:hidden fixed w-full rounded-lg left-0 bottom-0 border p-6  bg-slate-50">
                   <h2 className="text-xl mb-4 text-hashblack font-semibold">
                     Order Summary
                   </h2>
