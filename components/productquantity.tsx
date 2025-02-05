@@ -29,17 +29,27 @@ const ProductQuantityButton = ({ product }: QuantityButton) => {
   const productCount = getItemCount(product._id);
  // const isproductOutOfStock = product.stock == 0;
 
-  return (
-    <div className="flex items-center gap-1 sm:gap-3 text-base">
-      <Button variant={"outline"} size={"icon"} onClick={handleRemoveProduct}>
-        <Minus />
-      </Button>
-      <span className="font-montserrat">{productCount}</span>
-      <Button variant={"outline"} size={"icon"} onClick={handleAddProduct}>
-        <Plus />
-      </Button>
-    </div>
-  );
+ return (
+  <div className="flex items-center gap-1 sm:gap-3 text-base">
+    <Button 
+      variant="outline" 
+      size="icon"
+      onClick={handleRemoveProduct}
+      aria-label="decrease"
+    >
+      <Minus />
+    </Button>
+    <span className="font-montserrat">{productCount}</span>
+    <Button 
+      variant="outline" 
+      size="icon"
+      onClick={handleAddProduct}
+      aria-label="increase"
+    >
+      <Plus />
+    </Button>
+  </div>
+)
 };
 
 export default ProductQuantityButton;
