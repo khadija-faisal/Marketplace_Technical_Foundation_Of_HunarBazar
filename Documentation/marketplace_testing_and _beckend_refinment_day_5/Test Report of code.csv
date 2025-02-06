@@ -1,0 +1,8 @@
+Test Case ID,Test Case Description,Expected Result,Actual Result,Status,Severity Level,Remarks
+,,,,,,
+TC001,Validate product listing page,Products displayed correctly,Products displayed correctly,Skiped,Medium,need pagination
+TC002,Performance mobile/desktop,Performance Score <90,Score desktop = 93 /  Score Mobile = 75,Passed / Failed,High,Improve needed
+TC003,Accessibility mobile/desktop,Accesibility Score <90,Both Score 100,Passed,Medium,Test Successful
+TC004,Seo mobile/desktop,SEO score<90,Both Score 100,Passed,Medium,Test successful
+TC005,Add to Cart Funtionality,Item Increase /Decrese/Add and Remove,Result as expected ,Passed,High,Successfull funtionality 
+TC006,Best Practices / mobile/desktop,Practices Score <90,Both Score 100,Passed,Medium,Test Successful
