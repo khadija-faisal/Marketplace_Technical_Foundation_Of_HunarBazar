@@ -1,3 +1,27 @@
+# Hunar Bazaar E-Commerce Marketplace  
+
+## Project Overview  
+A responsive marketplace connecting artisans and buyers, built with **Next.js** and **Sanity CMS**.  
+
+### Key Features (Days 1–6): 
+1. **Marketplace Builder Outline** (Day 1):
+  - Define your marketplace type and write down your business goals and initial ideas.
+  -  Start brainstorming your data schema on paper and identify core business entities.
+2. **Marketplace Technical  Document** (Day 2):
+  - Technical requirements and project scope and diagram of system architecture.
+3. **API Integration** (Day 3):  
+   - Sanity CMS for product data.
+4. **Dynamic Product Listings** (Day 4):  
+   - Fetched from Sanity CMS using GROQ queries (Day 3).  
+   - Includes filters, search, and pagination.  
+5. **Cart Operation** (Day 4):  
+   - The state-managed cart has to add/remove/reset functionality.    
+6. **Testing** (Day 5):  
+   - Functional, performance, and security testing with Lighthouse (scores: 75 mobile, 93 desktop).  
+7. **Deployment** (Day 6):
+   -To deploy the Hunar Bazaar marketplace to a staging environment, validate functionality in a production-like setting, and prepare for final deployment.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -29,8 +53,9 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
+## Deployment Instructions  
+1. **Staging Environment**: 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
