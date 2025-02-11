@@ -100,10 +100,10 @@ export type Order = {
 
 export type Products = {
   _id: string;
-  _type: "products";
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
+  _type?: "products";
+  _createdAt?: string;
+  _updatedAt?: string;
+  _rev?: string;
   product?: string;
   slug?: Slug;
   productImage?: {
@@ -115,7 +115,7 @@ export type Products = {
     };
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
-    _type: "image";
+    _type?: "image";
   };
   description?: string;
   price?: number;
@@ -171,10 +171,10 @@ export type Sale = {
 
 export type Category = {
   _id: string;
-  _type: "category";
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
+  _type?: "category";
+  _createdAt?: string;
+  _updatedAt?: string;
+  _rev?: string;
   title?: string;
   slug?: Slug;
   description?: string;

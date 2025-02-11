@@ -12,7 +12,7 @@ const PriceView = ({ price, discount }: Price) => {
     ) : null;
   return (
     <div>
-      <div className="font-semibold flex gap-3 text-sm sm:text-lg lg:text-xl items-center">
+      <div className="font-semibold  flex gap-3 text-sm sm:text-lg lg:text-xl items-center" data-testid ='price-view'>
         <span className="text-red-700">{discountedPrice}</span>
         <span className="line-through text-sm sm:text-lg">
           <PriceFormat amount={price} />

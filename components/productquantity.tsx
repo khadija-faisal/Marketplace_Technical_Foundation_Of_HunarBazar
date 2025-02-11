@@ -11,6 +11,7 @@ interface QuantityButton {
  
 }
 const ProductQuantityButton = ({ product }: QuantityButton) => {
+  const isproductOutOfStock = product.stock == 0;
   const { addItem, removeItem, getItemCount } = userCartStore();
   const handleRemoveProduct = () => {
     removeItem(product._id);
@@ -45,6 +46,7 @@ const ProductQuantityButton = ({ product }: QuantityButton) => {
       size="icon"
       onClick={handleAddProduct}
       aria-label="increase"
+      disabled={product.stock === 0}
     >
       <Plus />
     </Button>
